@@ -1,0 +1,23 @@
+FROM ubuntu:12.10
+# MAINTAINER PaulE <pebre79@hotmail.com>
+RUN apt-get update
+
+# Install python
+RUN apt-get install -y python python-dev python-pip python-virtualenv
+
+ADD hello.py hello.py
+ADD bottle.py bottle.py
+
+# Define mountable directories
+#VOLUME ["/data"]
+
+# Define working directory
+#WORKDIR /data
+
+EXPOSE 5000
+#CMD ["/bin/sh", "-e", "/usr/local/bin/run"]
+#CMD ["python","hello.py"]
+# Define default command
+#CMD ["bash"]
+
+ENTRYPOINT ["python", "hello.py"]
