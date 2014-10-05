@@ -67,7 +67,10 @@ Running
    $ d rm -f `dl` # dl is the last container id ran
 
    # delete docker image
-   $ d rmi <container
+   $ d rmi <container>
+   
+   # delete all images
+   $ d rm `d ps -aq`
 
    # push image to Docker index
    $ d login
