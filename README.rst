@@ -76,6 +76,8 @@ Running
 References
 ---------
 
+Commandline Docker - http://docs.docker.com/reference/commandline/cli/#ps
+
 Vagrant provisioning via Docker - https://www.vagrantup.com/blog/feature-preview-vagrant-1-6-docker-dev-environments.html
 
 Install Docker on a Mac -  http://docs.docker.io/installation/mac/
