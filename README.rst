@@ -51,28 +51,29 @@ Running
    $ d pull ubuntu
    $ d build -rm -t pebreo/myimage .
 
-   # run the image 
+   # run the container 
    $ d run -d -p 8000:8000 -t pebreo/myimage
 
-   # run interactive image
+   # run interactive container
    $ d run -i -t pebreo/myimage /bin/bash
 
    # get the IP address
    $ sudo docker inspect <container_id> | grep IPAddress | cut -d '"' -f 4
  
-   # kill docker image
+   # kill docker container
    $ d ps -a
    $ d rm -f <containerid>
    # or
    $ d rm -f `dl` # dl is the last container id ran
 
    # delete docker image
-   $ d rmi <container>
+   $ d images
+   $ d rmi <image>
    
-   # delete all images
+   # delete all containers
    $ d rm `d ps -aq`
 
-   # push image to Docker index
+   # push container to Docker index
    $ d login
    $ d push pebreo/myimage
 
