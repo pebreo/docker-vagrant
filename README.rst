@@ -55,7 +55,7 @@ Running
    $ d run -d -p 8000:8000 -t pebreo/myimage
 
    # run interactive image
-   $ d run -i -p -t pebreo/myimage /bin/bash
+   $ d run -i -t pebreo/myimage /bin/bash
 
    # get the IP address
    $ sudo docker inspect <container_id> | grep IPAddress | cut -d '"' -f 4
